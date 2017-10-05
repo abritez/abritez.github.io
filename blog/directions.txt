@@ -1,0 +1,46 @@
+	1. create a variable of all the elements that you will need to interact with.  You could grab those elements by looking for their ids.
+
+	2. using the variable for your header element, create a text node and append it to the header.
+
+	3. create a loop and console.log all the titles of your blog posts.  Remember that your posts array lives "inside" an the object "blog". This will require some dot notation.  You could test your dot notation in the console. An example of dot notation is artist.hobbies[2]
+
+	4. Once you have the title printing out on your console, create a variable inside your loop named 'blog_title' and store the the value for your blog post title. This is what you added in your console.log()
+
+	5. inside the loop create a variable named "header_element" and create and store an "h2" element on it
+
+	6. append the variable "header_element" to your "content" element. Check your debugger to see if the H2s where created
+
+	7. create a variable "header_text" and create text node that will pass in the variable 'blog_title'
+
+	8. append your variable "header_text" into "headerEle" element
+
+	9. --- Repeat 3-8 for the paragraph for each blog post ----
+
+	10. Just like your blog titles, print out the body (found in blogData.js) of your blog post in the console to make sure you are finding it correctly.
+
+	11. Once you have the title printing out on your console, create a variable inside your loop named 'blog_text' and store the the value for your blog post body.
+
+	12. inside the loop create a variable named "body_element" and create and store a "p" element on it
+
+	13. append the variable "body_element" to your "content" element. Check your debugger to see if the paragraph tags where created
+	
+	14. create a variable "body_textNode" and create text node and pass in the variable 'blog_text'
+
+	15 append your variable "body_textNode" into "body_text" element
+
+	16 ----- Extra Challenge ------
+
+	17. Using a similar approach as above, use nested loops to add in comments
+
+	18. Pay 
+
+
+	related content:
+	
+	arrays and objects
+	document.getElementById()
+	for(){}
+	console.log()
+	document.createTextNode();
+	document.createElement()
+	element.appendChild();
