@@ -1,13 +1,15 @@
-
+//store element from the html file so i could use them later
 var contentArea = document.getElementById('content');
+
+//create a ul tag that i could add all my strings too, make sure to append.
 var artistList = document.createElement("ul");
 contentArea.appendChild(artistList);
 
+//loop all people in my javascript object (artist.js)
 
-
-//loop all people
 for(var i = 0; i<users.length; i++){
-	
+  
+  //start off my string but I will add to it	
   var string = users[i].firstname + " " + users[i].lastname + " likes to ";
 
   //loop the hobbies of this person
@@ -21,10 +23,12 @@ for(var i = 0; i<users.length; i++){
       string += "and " + users[i].hobbies[x] + ". ";
     }
   }
-  //once all the loops are done print them all out
+  //once all the loops are done create an empty li element
   var artistItem = document.createElement("li");
+  artistList.appendChild(artistItem);
+  
+  //grab the string and insert it inside the li element
   var artistText = document.createTextNode(string);
 	artistItem.appendChild(artistText);
-	artistList.appendChild(artistItem);
-  //document.write(string);
+	
 }
