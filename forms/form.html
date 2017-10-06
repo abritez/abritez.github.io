@@ -1,0 +1,43 @@
+<html>
+	<head></head>
+	<body>
+		<h1>ACME Company</h1>
+		<h2>Registration</h2>
+		<form id="registraion_form" action="confirmation.html" method="GET" >
+			
+			<fieldset>
+				<legend>Info</legend>
+				<label for="username">User Name</label>
+				<input name="username" placeholder="username" id="username" type="text">
+				<br>
+				<label for="password">Password</label>
+				<input name="password" placeholder="password" id="password" type="password">
+				<br>
+				<label for="password">Confirm Password</label>
+				<input name="confirm" placeholder="confirm password" id="confirm" type="password">
+			</fieldset>			
+	
+			<fieldset>
+				<legend>Favorite Hobbies</legend>
+
+				<ul>
+					<li><input name="hobbies" id="ch1" type="checkbox" value="reading"><label for="ch1">Reading</label></li>
+					<li><input name="hobbies" id="ch2" value="dancing" type="checkbox"><label for="ch2">Dancing</label></li>
+					<li><input name="hobbies" value="hiking" id="ch3" type="checkbox"><label for="ch3">Hiking</label></li>
+					<li><input name="hobbies" value="coding" id="ch4" type="checkbox"><label for="ch4">Coding</label></li>
+				</ul>
+			</fieldset>
+
+			<input id="submit_btn" type="submit" value="Register">
+
+		</form>
+		<div>
+			<h3>Rules</h3>
+			<ol>
+				<li>User name must be at least 3 charectors long and contain no numbers</li>
+				<li>Passord and Confirmation must match exactly</li>
+			</ol>	
+		</div>
+		<script src="form.js"></script>
+	</body>
+</html>
