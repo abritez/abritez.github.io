@@ -1,12 +1,8 @@
-var submit_btn = document.getElementById("submit_btn");
-var registraion_form = document.getElementById("registraion_form");
-
-
-
 function handleSubmission(event){
 	
 	console.log(registraion_form.elements);
 
+	/*store variable of all the elements inside the form*/
 	var username = registraion_form.elements.username;
 	var password = registraion_form.elements.password;
 	var confirm = registraion_form.elements.confirm;
@@ -25,20 +21,25 @@ function handleSubmission(event){
 	/*Validation Code*/
 
 	if(username.value.length < 3){
-		alert("Please make sure you use at least 5 charectors!");
+		alert("Please make sure you use at least 5 charectors for your username!");
+		event.preventDefault();
+		username.focus();
 		return false;
 	}
 
-	if(password.value != confirm.value ){
-		alert("Please make sure your passwords match");
+	if(password.value.length < 3){
+		alert("Please make sure you use at least 5 charectors for your password!");
+		event.preventDefault();
+		username.focus();
 		return false;
 	}
 
-
-
+	/*Add more Validation Code requirements here*/
 	
 }
 
-
-
+/*
+	Listen to when the sumbit event fired from the form
+*/
+var registraion_form = document.getElementById("registraion_form");
 registraion_form.addEventListener('submit', handleSubmission);
