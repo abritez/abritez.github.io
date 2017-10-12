@@ -1,0 +1,12 @@
+.darkTheme{
+	background-color: #3F3F3F;
+	color: #f8f8f8;
+}
+
+.darkTheme h2, .darkTheme h3, .darkTheme h4, .darkTheme h5, .darkTheme h6 {
+	color: #F2CC82;
+}
+
+.darkTheme a{
+	color: #C369EF;
+}
