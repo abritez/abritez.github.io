@@ -1,0 +1,14 @@
+body {
+	background-image: url("https://i.pinimg.com/736x/29/9f/29/299f2974a12149f7fbe3425a002ab33d--background-paper-free-wood-background.jpg");
+	background-repeat: no-repeat;
+}
+
+#header, #footer {
+	background-color: #666666;
+}
+
+.panel {
+	background-color: #ffffff;
+}
+
+
