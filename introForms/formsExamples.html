@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<title>Forms Elements</title>
+	</head>
+	<body>
+		
+		<h1>Forms</h1>
+		<h2>Most typically used</h2>
+		<form action="">
+			<ul>
+				<li>Text<br/>
+					<input id="name" name="username" type="text"><br/>
+					<input id="name" type="password" placeholder="password"><br/>
+					<textarea id="ta" name="essay" cols="30" rows="10"></textarea>
+				</li>
+
+				<li>Checkbox<br/>
+					<input name="favColor" id="favcolor1" value="red" type="checkbox"><label for="favcolor1">Red</label><br/>
+					<input name="favColor" id="favcolor2" value="green" type="checkbox"><label for="favcolor2">Green</label><br/>
+					<input name="favColor" id="favcolor3" value="blue" type="checkbox"><label for="favcolor3">Blue</label>
+				</li>
+
+				<li>Radio Buttons<br/>
+					<input name="favfood" id="favfood1" value="oatmeal" type="radio"><label for="favfood1">Oatmeal</label><br/>
+					<input name="favfood" id="favfood2" value="pizza" type="radio"><label for="favfood2">Pizza</label><br/>
+					<input name="favfood" id="favfood3" value="chicken" type="radio"><label for="favfood3">Chicken</label>
+				</li>
+
+				<li>Number Stepper<br/>
+					<input name="count" id="myCount" value="12" type="number" min="10" max="20"><br/>
+				</li>
+
+				<li>Select Boxes<br/>
+					<select name="state" id="myState">
+						<option value="NJ">New Jersey</option>
+						<option value="NY">New York</option>
+						<option value="TX">Texas</option>
+					</select><br/>
+					<select multiple name="city" id="myCity">
+						<option value="mn">Manhattan</option>
+						<option value="qn">Queens</option>
+						<option value="bx">Bronx</option>
+						<option value="br">Brooklyn</option>
+						<option value="si">Staten Island</option>
+					</select>
+				</li>
+				<li>
+					<input type="submit" value="Submit"><br>
+					
+				</li>
+			</ul>
+
+			<h2>Other forms: Browser Support May Vary</h2>
+			<ul>
+				<li>Image <input type=image src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"></li>
+				<li>Email <input type=email> (similar: tel, url)</li>
+				<li>Range <input type=range></li>
+				<li>Date <input type=date></li>
+				<li>Month <input type=month></li>
+				<li>Week <input type=week></li>
+				<li>Color w/ Value<input type=color value="#ff3d3d"></li>
+				<li>Progress bar<progress max="100" value="26"></progress></li>
+				<li>Meter <meter value="74" min="0" max="100"
+	 low="25" high="75" optimum="15"></meter></li>
+	 			<li><a href="">More here</a></li>
+			</ul>
+			
+			<h2>Common Attributes</h2>
+			<ul>
+				<li>Disabled<br/>
+					<input disabled id="name" type="text"><br/>
+					<input disabled id="favcolor1" value="red" type="checkbox"><label for="favcolor1">Red</label><br/>
+				</li>
+				<li>Required<br/>
+					<input required id="name" type="text"><br/>
+					<input required id="favcolor1" value="red" type="checkbox"><label for="favcolor1">Red</label><br/>
+				</li>
+				<li>Checked<br/>
+					
+					<input checked id="favcolor1" value="red" type="checkbox"><label for="favcolor1">Red</label><br/>
+					<input checked name="favfood" id="favfood1" type="radio"><label for="favfood1">Oatmeal</label><br/>
+				</li>
+				<li>Read Only<br/>
+					<input readonly id="name" value="You can not type in this box or delete the text" type="text"><br/>	
+				</li>
+			</ul>
+		</form>
+		<script src="w6.js"></script>
+	</body>
+</html>
