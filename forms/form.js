@@ -16,8 +16,6 @@ function handleSubmission(event){
 		}
 	}
 
-	console.log(username.value.length);
-
 	/*Validation Code*/
 
 	if(username.value.length < 3){
@@ -34,7 +32,15 @@ function handleSubmission(event){
 		return false;
 	}
 
-	/*Add more Validation Code requirements here*/
+	/*
+		Add more Validation Code requirements here
+		ex.
+		Password and Confirmation should match
+	*/
+
+
+
+
 	
 }
 
