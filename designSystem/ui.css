@@ -1,0 +1,130 @@
+button, .button {
+	font-family: 'Source Sans Pro', sans-serif;
+	border: none;
+    color: #f8f8f8;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    background: #7F37A2;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+button.warning {
+	background-color: #EF699F;
+}
+
+button.success {
+	background-color: #40BC7F;
+}
+
+button.primary-dark{
+	background-color: #C369EF;
+}
+
+button:hover, .button:hover {
+	opacity: .9;
+}
+
+button:disabled, .button:disabled {
+	background-color: #cdcdcd;
+}
+
+button.outline {
+	box-shadow: inset 0px 0px 0px 2px #7F37A2;
+	 /*  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+	 */
+	/* border-width: 2px;
+	border-color: #7F37A2;
+	border-style: solid;
+     */
+	/* box-shadow: inset 0 0 0 -1px red */
+
+    color: #7F37A2;
+    background: #f8f8f8;
+}
+
+/*BUTTON GROUP*/
+
+
+/*CHECKBOX*/
+.checkbox,
+.radio {
+	/* Enable absolute positioning of the hidden form controls */
+	position:relative;
+	/* Just a bit of space. */
+	margin-bottom:0.5em;
+	/*
+	Match line-height to the height of the replacement image to ensure it
+	doesn't get clipped
+	*/
+	line-height:22px;
+}
+fieldset :last-child {
+	margin-bottom:0;
+}
+/*
+Position and hide the real checkboxes and radio buttons.
+The inputs are made transparent instead of completely hidden to preserve
+clickability in browsers that don't have clickable labels, like Safari for
+iOS 5 and older.
+*/
+input[type="checkbox"],
+input[type="radio"] {
+	position:absolute;
+	/* Match the image dimensions */
+	width:22px;
+	height:22px;
+	/* Reset anything that could peek out or interfere with dimensions */
+	overflow:hidden;
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	opacity:0;
+}
+/*
+Insert a pseudo element inside each label and give it a background
+image that will become the custom checkbox or radio button.
+Using inline-block lets you use vertical-align to adjust it vertically
+as needed.
+*/
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
+	display:inline-block;
+	width:22px;
+	height:22px;
+	margin-right:4px;
+	background:url(radio-checkbox.png) no-repeat;
+	content:" ";
+	vertical-align:top;
+}
+/*
+Position the background image differently depending on the state of each
+checkbox and radio button.
+*/
+input[type="radio"]:focus + label:before {
+	background-position:0 -22px;
+}
+input[type="radio"]:checked + label:before {
+	background-position:0 -44px;
+}
+input[type="radio"]:checked:focus + label:before {
+	background-position:-0 -66px;
+}
+input[type="checkbox"] + label:before {
+	background-position:0 -88px;
+}
+input[type="checkbox"]:focus + label:before {
+	background-position:0 -110px;
+}
+input[type="checkbox"]:checked + label:before {
+	background-position:0 -132px;
+}
+input[type="checkbox"]:checked:focus + label:before {
+	background-position:0 -154px;
+}
