@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Drag and Drop</title>
+
+		<script>
+			
+			function allowDrop(ev) {
+			    ev.preventDefault();
+			}
+
+			function drag(ev) {
+			    ev.dataTransfer.setData("text", ev.target.id);
+			}
+
+			function drop(ev) {
+			    ev.preventDefault();
+				var data = ev.dataTransfer.getData("text");
+				var content_ele = document.getElementById("content");
+			    content_ele.style.backgroundImage = "url('images/"+data+".png')";
+			}
+		</script>
+
+
+		<style>
+			#content{
+				height: 80%;
+				width:100%;
+			}
+		</style>
+
+	</head>
+	<body>
+		
+		<div id="content" ondrop="drop(event)" ondragover="allowDrop(event)">
+			
+		</div>
+		<img id="forest" src="images/forest.png" draggable="true"
+			ondragstart="drag(event)" width="100" height="69">
+			<img id="beach" src="images/beach.png" draggable="true"
+			ondragstart="drag(event)" width="100" height="69">
+		
+	</body>
+</html>
