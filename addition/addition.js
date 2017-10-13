@@ -48,7 +48,7 @@ function checkSum(){
 	}
 }
 
-resetValues()
+resetValues();
 checkAnswer_btn.addEventListener('click',checkSum);
 nextProblem_btn.addEventListener('click',resetValues);
 
