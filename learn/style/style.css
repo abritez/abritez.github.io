@@ -43,8 +43,11 @@ div.editor-fig{
 .editor {
         margin: 0;
         height: 300px;
-        width: 100%;
+        width: 50%;
+        float: left;
     }
+
+
 textarea{
 	width: 100%;
 }
@@ -96,6 +99,10 @@ h2 {
     /* 2.25x body copy size = 36px */
     line-height: 1.25;
   }
+}
+
+.bold{
+	font-weight: 600;
 }
 
 .code{

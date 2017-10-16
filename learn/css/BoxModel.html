@@ -11,10 +11,10 @@
 			<p>Surrounding every single element that shows up in your browser, no matter the complexity, is a simple box.</p>
 			<p>This box is comprise of four parts.</p>
 			<ol>
-				<li>The Content: This is your element.  Your element could be an image, text, video, absolutely anything.</li>
-				<li>Padding:  This is the inner space between the content and border.</li>
-				<li>Border: Just like the names implies. This is the border around the box (not the content).  This border is always square, but there are some stylying options which we will go over later in this section.</li>
-				<li>Margin: The margin is the outer space of the content.</li>
+				<li><span class="bold">Content:</span> This is your element.  Your element could be an image, text, video, absolutely anything.</li>
+				<li><span class="bold">Padding:</span>  This is the inner space between the content and border.</li>
+				<li><span class="bold">Border:</span> Just like the names implies. This is the border around the box (not the content).  This border is always square, but there are some stylying options which we will go over later in this section.</li>
+				<li><span class="bold">Margin:</span> The margin is the outer space of the content.</li>
 			</ol>
 		</div>
 		<figure>
@@ -28,64 +28,120 @@
 		</figure>
 		<div class="content">
 			<h2>The Code</h2>
-			Now it's time to check out some of the code.
-
+			<p>Now it's time to check out some of the code.</p>
+			<p>All the margin & padding properties can have the following values:
+</p>
+			
+<ul>
+	<li>auto - the browser calculates the margin
+</li>
+	<li>length - specifies a margin in px, pt, cm, etc.</li>
+	<li>% - specifies a margin in % of the width of the containing element</li>
+	<li>inherit - specifies that the margin should be inherited from the parent element</li>
+</ul>			
+<!--PADDING-->
 			<h3>Padding</h3>
+Adjust the padding for a specific side of the box
 			<pre class="code">button{
-	padding: 10;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
 }</pre>
-			<h3>Margin</h3>
+Adjust the padding for all sides of the box
 			<pre class="code">button{
-	margin: 10;
+	padding: 10px;
+}</pre>
+Shorthand for adjusting padding on all sides of a box.  The order of measurement is clock-wise: <i> top, right, bottom, and left</i>.
+			<pre class="code">button{
+	padding: 10px 15px 10px 15px;
+}</pre>
+<h3>Margin</h3>
+Adjust the margin for a specific side of the box
+			<pre class="code">button{
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}</pre>
+Adjust the margin for all sides of the box
+			<pre class="code">button{
+	margin: 10px;
+}</pre>
+Shorthand for adjusting margins on all sides of a box.  The order of measurement is clock-wise: <i> top, right, bottom, and left</i>.
+			<pre class="code">button{
+	margin: 10px 15px 10px 15px;
 }</pre>
 			<h3>Border</h3>
+			Border includes a variety of additional CSS attributes. Below are a few, but the full list could be found in the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" target="_blank">MDN web docs</a> and on the web.  
 			<pre class="code">button{
-	border-size: 10;
+	border-style: solid;
+	border-width: 2;
+	border-color: green;
 }</pre>
 		</div>
 		<div class="content">
-			<h2>Example 1</h2>
-			<p>In this example we are adjust the CSS properties of padding, margin, and border to create a variety of button types.</p>
+			<h2>Examples</h2>
+			<h3>Creating buttons</h3>
+			<p>In this example we are adjusting the CSS properties for padding, margin, and border to create a variety of button types.</p>
+			<p>When looking at the CSS for this example notice that attributes that are true for all buttons are under the element selector 'button'.  Anything that is specific to size and/or style of button uses class names. For example 'button.outline' and 'button.small'.  You could see these class names being specified in the HTML attributes of the buttons (class="large outline"). </p>
 		</div>
 <p data-height="384" data-theme-id="light" data-slug-hash="zEmNLW" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Buttons" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/zEmNLW/">Buttons</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 		<div class="content">
 			<h2>Practice</h2>
-			In the editor below, please create a button that consists of the following CSS attriutes.
+			<h3>Create a button</h3>
+			<p>In the editor below, please create a button that consists of the following CSS attriutes.</p>
 
 			<ul>
-				<li>Label font size of 16px</li>
-				<li>Label should be white</li>
-				<li>the button should have a corner radius of 8px</li>
-				<li>the background should be red.</li>
-				<li>the top and bottom padding should be 12px</li>
-				<li>left and right padding should be 16px</li>
+				<li>Label <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" target="_blank">font size</a> of 16px</li>
+				<li>font <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank">font color</a>  should be white</li>
+				<li>the button should have a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" target="_blank">boder-radius</a> of 8px</li>
+				<li>the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color" target="_blank">background-color</a> should be red.</li>
+				<li>the top and bottom <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding>" target="_blank">padding</a> should be 12px</li>
+				<li>left and right <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding>" target="_blank">padding</a> should be 16px</li>
 			</ul>
 		</div>
 		
+		<!--
 		<figure class="editor-fig">
 			<figcaption>
 				<h3>Apply it!</h3>
-				<p>Using what you learned. Add the appropriate CSS code bellow</p>
+				<p>Using what you learned. Add the appropriate CSS code below</p>
 			</figcaption>
-			
-			<pre id="editor" class="js-editor editor">
-button{
-/*add your css code here*/
-}
-			</pre>
+			<div>
+				<pre id="editor" class="js-editor editor">
+	&lt;html>
+		&lt;head>
+			&lt;title>Box Model&lt;/title>
+		&lt;/head>
+		&lt;body>
+			&lt;button>My Button&lt;/button>
+		&lt;/body>
+	&lt;/html>
+				</pre>
+				<pre id="editorB" class="js-editor editor">
+	button{
+	/*add your css code here*/
+	}
+				</pre>
+			</div>
 			<div class="feedback">
 				Feedback will go here, pointing student to resources
 			</div>
 		</figure>
-
+		-->
 
 		
+		<!--
 		<div class="content">
 			<h3>Explain it</h3>
 			<p>What is the difference between margin and padding?</p>
 			<textarea name="bridge" id="bridge" rows="10"></textarea>
 		</div>
+		-->
+
 		<script src="../script/ace-builds-master/src/ace.js"></script>
 		<script src="../script/learn.js"></script>
 	</body>

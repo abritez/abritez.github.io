@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<title>Display</title>
+		<link rel="stylesheet" href="../style/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,600,700|Source+Serif+Pro:400,600" rel="stylesheet">
+	</head>
+	<body>
+		<div class="content">
+			<h1>Display</h1>
+			<p>
+			Elements are broken up into a few types, most notably <em>block-level</em> and <em>inline</em>.
+			</p>
+
+			<h2>Block Level Elements</h2>
+			<p>
+			Some of common characteristics for these elements include:
+			</p>
+			<ul>
+				<li>if no width is set it will stretch to fit the size of it's parent element</li>
+				<li>if not hieght is set it will expand to fit the size of the child elements it is containing</li>
+				<li>it will be place below the previous element, unless other CSS rules are applied to it or surrounding elements</li>
+			</ul>
+
+			<p>Examples of block-level elements include: </p>
+			<ul>
+				<li>&lt;p&gt;</li>
+				<li>&lt;h1&gt;...&lt;h6&gt;</li>
+				<li>&lt;ul&gt; and &lt;ol&gt;</li>
+				<li>&lt;li&gt;</li>
+				<li>&lt;div&gt;</li>
+			</ul>
+
+			<h2>In-line Elements</h2>
+
+			<p>
+			Some of common characteristics for these elements include:
+			</p>
+			<ul>
+				<li>will ignore height and width properties</li>
+				<li>will stay on the same line so it won't drop to the next line, unless the previous content was a block element.</li>
+			</ul>
+
+			<p>Examples of inline elements include: </p>
+			<ul>
+				<li>&lt;a&gt;</li>
+				<li>&lt;b&gt;...&lt;strong&gt;</li>
+				<li>&lt;i&gt; and &lt;em&gt;</li>
+				<li>&lt;img&gt;</li>
+				<li>&lt;button&gt;</li>
+				<li>&lt;span&gt;</li>
+			</ul>
+
+			<h2>Example</h2>
+			<h3>Default Behavior of Block and Inline elements</h3>
+			<p>This example shows how block and inline elements function with no CSS applied.</p>
+		</div>
+		<figure>
+			<p data-height="500" data-theme-id="light" data-slug-hash="VMVLeK" data-default-tab="html,result" data-user="abritez" data-embed-version="2" data-pen-title="Block & Inline Elements" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/VMVLeK/">Block & Inline Elements</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	</figure>
+		<div class="content">
+			<h3>Behavior overridden via CSS</h3>
+			<p>In this example we are forcing the same elements to work differantly by changing the display property in CSS</p>
+		</div>
+			<figure>
+				<p data-height="500" data-theme-id="light" data-slug-hash="eGQNyO" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Block & Inline Elements Switch" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/eGQNyO/">Block & Inline Elements Switch</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+			</figure>
+
+		<div class="content">
+			<h2>Other diplay properties</h2>
+			<h3>Inline-Block</h3>
+			<p>In the event that you want turn a block element into an inline element, but would like to retain the hight and width properties you could use 'display:inline-block'.</p>
+
+			<h3>Display None</h3>
+			<p>Setting your element's display value to none in CSS, will hide it from view in the browser.  This is commonly used to hide and show elements from Javascript.</p>
+			<p>Below is an example that shows how you could hide an element when you click a button. In this example we are adjusting CSS directly from javascript using 'elementName.style.property'.</p>
+			</div>
+			<figure>
+				<p data-height="400" data-theme-id="light" data-slug-hash="RLqWNJ" data-default-tab="js,result" data-user="abritez" data-embed-version="2" data-pen-title="Hide Element" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/RLqWNJ/">Hide Element</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+			</figure>
+			
+			<div class="content">
+				<p>Another way to achieve this is to use a class name to describe the state of your element. You could then control how your element looks by adding and removing class names. Check out the documentation on <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList" target="_blank">element.classList</a> to see how to toggle, add, and remove class names.</p>
+			</div>
+
+			<figure>
+				<p data-height="450" data-theme-id="light" data-slug-hash="RLqWNJ" data-default-tab="js,result" data-user="abritez" data-embed-version="2" data-pen-title="Toggle Classes using ClassList" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/RLqWNJ/">Toggle Classes using ClassList</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+			</figure>
+		
+
+	</body>
+</html>
