@@ -90,6 +90,59 @@
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 			</figure>
 		
+		<div class="content">
+			<h2>Excercise</h2>
+			<h3>Create a accordion</h3>
+			<p>Recreate the design and functionality of the image requirements below</p>
+			<p>Your accordian should</p>
+			<ul>
+				<li>have the correct <a href="BoxModel.html">padding</a></li>
+				<li>correct <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-family">font-family</a> loaded in from <a href="https://fonts.google.com/specimen/Source+Sans+Pro" target="_blank"></a>Google Fonts</a></li>
+				<li>correct border style and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" target="_blank">radius</a></li>
+				<li>correct <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" target="_blank">font-size</a></li>
+				<li>correct <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank">font colors</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">on click</a> of the header the body should display</li>
+				<li>on click of 'close window' hide the body area</li>
+				<li>you should be able to click on it and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">adust the class</a>  that allows it to hide and show. (look at example on this page)</li>
+			</ul>
+
+		</div>
+			<figure>
+				<img src="../images/accordian_spec.png" alt="">
+			</figure>
+			<figure>
+				<pre id="editor" class="js-editor editor">
+<html>
+	<head>
+		<title>Accordion Test</title>
+	</head>
+	<body>
+		<div>
+			<a href="#">Label</a>
+			<div class="accordian_body">
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, blanditiis adipisci earum doloremque consequatur laborum iusto. Nam unde iste ut, vitae cum iusto dignissimos omnis ipsum, rem eius illo laudantium.
+				</p>
+				<buttom class="close_btn">Close Window</buttom></a>
+			</div>
+		</div>
+	</body>
+</html>
+				</pre>
+			</figure>
+		<div class="content">
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+
+	<script src="../script/ace-builds-master/src/ace.js"></script>
+	<script>
+		var editor = ace.edit("editor");
+		editor.setTheme("ace/theme/twilight");
+		editor.session.setMode("ace/mode/html");
+		editor.setReadOnly(true);
+	</script>
 
 	</body>
 </html>

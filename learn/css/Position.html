@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>Positioning</title>
+		<link rel="stylesheet" href="../style/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,600,700|Source+Serif+Pro:400,600" rel="stylesheet">
+	</head>
+	<body>
+		<div class="content">
+			<h1>Positioning</h1>
+			<h2>Static</h2>
+			<p>This is the default position type of an element. With this positioning, your block level elements will stack one ontop of the next. Properties such as right, left, top, and bottom, are not available to static elements. That means if you'd need to override the static property default with a type that supports it.</p>
+		</div>
+		<figure>
+			<p data-height="400" data-theme-id="light" data-slug-hash="WZYXmr" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Position: Static" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/WZYXmr/">Position: Static</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+		</figure>
+		<div class="content">
+			<h2>Relative</h2>
+			<p>Elements that are positioned relative work nearly identical than those that are static. The difference is that an element that has a relative position could specifify an top, left, bottom, and right offset</p>
+			<p>An important thing to note is that even though you are moving the elements using offset properties, the elements siblings layout as if the element was in the original position. In the example below notice that the second box shifted down, however the 3 box has the same vertical position, not effected by the position of the second box.</p>
+		</div>
+			<figure>
+				<p data-height="400" data-theme-id="light" data-slug-hash="PJxEPw" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Position: Relative" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/PJxEPw/">Position: Relative</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+			</figure>
+		
+		<div  class="content">
+			<h2>Absolute</h2>
+			<p>Elements that have a position of absolute could be placed anywhere.  Similarly to relative elements, absolute elements adhere to top, bottom, left, and right positioning.</p>
+			<p>The example below has 4 boxes position at each corner of the container.  Make sure to look at the CSS.</p>
+		</div>
+
+			<figure>
+				<p data-height="265" data-theme-id="light" data-slug-hash="RLqxMP" data-default-tab="result" data-user="abritez" data-embed-version="2" data-pen-title="Position: Absolute" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/RLqxMP/">Position: Absolute</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+			
+			<div class="content">
+				<p>
+				An important note to keep in mind is that the coordinats that are specified on an absolute positioned element are based on the parent element. Not the window.
+				</p>
+				<p>In the example below we have nested the red box inside of the second grey box, and are moving it 10 pixels down from there. However, notice that the parent element has been set to 'relative'.  This will not work when inside an element that is positioned as 'static', since static does not have a cooredinate system.</p>
+			</div>
+	
+			<figure>
+<p data-height="265" data-theme-id="light" data-slug-hash="boQLOQ" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Position: Absolute Nested" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/boQLOQ/">Position: Absolute Nested</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+			<div  class="content">
+				<p>Using absolute positioning also allows you to anchor side of the rectagle.  This results in a resizable flow for your element.</p>
+				<p>In the example below the abosolute positioned box has both left and right value specified in the CSS.</p>
+			</div>
+
+			<figure>
+				<p data-height="265" data-theme-id="light" data-slug-hash="eGQyeK" data-default-tab="result" data-user="abritez" data-embed-version="2" data-pen-title="Position: Absolute" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/eGQyeK/">Position: Absolute</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+			</figure>
+		<div  class="content">
+			<h2>Fixed</h2>
+			<p>Fixed elements share all of the same features as absolute elements, with the exception that the coordantes are based on the browser (viewport), and not the parent element. That means that fixed elements will not scroll, and stay 'fixed' on the screen.</p>
+
+		</div>
+			<figure>
+				<p data-height="265" data-theme-id="light" data-slug-hash="XeyZzr" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Position: Fixed" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/XeyZzr/">Position: Fixed</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+		<div  class="content">
+			<h2>Sticky</h2>
+			<p></p>
+			<figure></figure>
+		</div>
+
+		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	</body>
+</html>
