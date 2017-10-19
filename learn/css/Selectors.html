@@ -1,0 +1,116 @@
+<html>
+	<head>
+		<title>Selectors</title>
+		<link rel="stylesheet" href="../style/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,600,700|Source+Serif+Pro:400,600" rel="stylesheet">
+	</head>
+	<body>
+		<div class="content">
+			<h1>Selectors</h1>
+			<p>In order to apply a style to element(s) you must first indentify the element that you would like to stylize. We do this by using</p>
+			<h2>Universal Selector (*{})</h2>
+			<p>The universal selector applies CSS style to all the elements on the page.</p>
+			
+<figure>
+	<p data-height="265" data-theme-id="light" data-slug-hash="ZXwMeL" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Selector: Universal" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/ZXwMeL/">Selector: Universal</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+</figure>
+
+	<p>In the example above we have overridden every element on the page to use a font-family of Arial, instead of the defualt Serif font.</p>
+
+			<h2>Type Selector (element{})</h2>
+			<p>HTML is comprised of tags, these tags denote their element type.  By specifying a <i>type</i>, we are able to apply styles to any element on the page that matches our selector. That means, if there multiple elements that share that name on the page, then they will <em>all</em> be applied</p>
+
+	<figure>
+		<p data-height="265" data-theme-id="light" data-slug-hash="OxdovL" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Selector: Element Type" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/OxdovL/">Selector: Element Type</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	</figure>
+
+	<p>In the example above, only elements on the page that are of type "&lt;h2&gt;" are targeted to override the default serif font-family to "Arial" and the color "red".</p>
+
+	<aside class="note">
+		If the element being targeted contains child elements within that have their CSS property set to <i>inherit</i>, then those child element will take on the same properties.
+	</aside>
+
+<h2>ID Selector (#idName{})</h2>
+			<p>An ID selector starts off by using a hash (#) and immedidiatly followed by an ID name that was specified to an element in your HTML</p>
+			<p>In the example below we have an HTML file with multiple elements. One of these elements has an id of "content". All children elements are inheriting the values.</p>
+			
+<figure>
+	<p data-height="265" data-theme-id="light" data-slug-hash="yzZGXa" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Selector: ID Name" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/yzZGXa/">Selector: ID Name</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+</figure>
+			
+
+<h2>Class Selector (.idName{})</h2>
+			<p>A class selector starts off by using a dot (.) and immedidiatly followed by an class name that was specified to the element(s) in your HTML</p>
+			<p>In the example below we have an HTML file with multiple elements. Several of these elements have their class set to either "special".</p>
+			
+			<figure>
+	<p data-height="400" data-theme-id="light" data-slug-hash="Jrxwdr" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Selector: Class Name" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/Jrxwdr/">Selector: Class Name</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+</figure>
+
+
+
+			<h2>Descendant Selector (element .idName{})</h2>
+			<p>Sometimes you might want add an additional level of speficity to your styles.  An item with a class name of "special" that lives in a footer, might look different than one that lives in your main content area.</p>
+
+			<figure>
+				<p data-height="600" data-theme-id="light" data-slug-hash="VMgqQV" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Selector: Descendant" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/VMgqQV/">Selector: Descendant</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+			<p>In the example above your notice that elements with a class name of "special" show up differantly.</p>
+
+			<h2>Child Combinator Selector (element > element)</h2>
+			<p>Very similar to the descendant selector, child combinators and another level of speficity were only immediate children are targeted.</p>
+			<p>To specify a child combinator you need to add a ">" in between the parent and child selectors.</p>
+
+			<figure>
+				<p data-height="400" data-theme-id="light" data-slug-hash="BwMvgj" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Selector: Child Combinator" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/BwMvgj/">Selector: Child Combinator</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+			<p>In the example above your notice that elements with a class name of "special" show up differantly.</p>
+
+			<h2>General Sibling Combinator Selector (element ~ element)</h2>
+			<p>Very similar to the descendant selector, child combinators and another level of speficity were only immediate children are targeted.</p>
+			<p>To specify a child combinator you need to add a ">" in between the parent and child selectors.</p>
+
+			<figure>
+				<p data-height="400" data-theme-id="light" data-slug-hash="WZPPyd" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Selector: General Sibling Combinator" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/WZPPyd/">Selector: General Sibling Combinator</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+			<p>In the example above your notice that elements with a class name of "special" show up differantly.</p>
+
+			<h2>Adjacent Sibling Combinator Selector (element + element)</h2>
+			<p>Very similar to the descendant selector, child combinators and another level of speficity were only immediate children are targeted.</p>
+			<p>To specify a child combinator you need to add a ">" in between the parent and child selectors.</p>
+
+			<figure>
+				<p data-height="400" data-theme-id="light" data-slug-hash="oGmmmj" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Selector: Adjacent Sibling Combinator" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/oGmmmj/">Selector: Adjacent Sibling Combinator</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+			<p>In the example above your notice that elements with a class name of "special" show up differantly.</p>
+
+			<h2>Attribute Selector (element[attribute="value"])</h2>
+			<p>Very similar to the descendant selector, child combinators and another level of speficity were only immediate children are targeted.</p>
+			<p>To specify a child combinator you need to add a ">" in between the parent and child selectors.</p>
+
+			<figure>
+				<p data-height="265" data-theme-id="light" data-slug-hash="MELLMZ" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Selector: Attribute Selector" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/MELLMZ/">Selector: Attribute Selector</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+			<p>In the example above your notice that elements with a class name of "special" show up differantly.</p>
+
+
+			<h2>Pseudo-class Selector (element:state)</h2>
+			<p>Very similar to the descendant selector, child combinators and another level of speficity were only immediate children are targeted.</p>
+			<p>To specify a child combinator you need to add a ">" in between the parent and child selectors.</p>
+
+			<figure>
+				<p data-height="265" data-theme-id="light" data-slug-hash="WZPmOY" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Selector: Psuedo" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/WZPmOY/">Selector: Psuedo</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+			<p>In the example above your notice that elements with a class name of "special" show up differantly.</p>
+
+		</div>
+
+		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	</body>
+</html>

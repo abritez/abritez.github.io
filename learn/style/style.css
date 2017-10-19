@@ -13,6 +13,7 @@ pre.code{
 	background-color: #C8E3FF;
 	border-radius: 8px;
 	padding: 10px;
+  overflow: hidden;
 }
 
 figure{
