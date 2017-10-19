@@ -1,0 +1,2 @@
+.zebra{border-collapse:collapse;color:black;background-color:#ffffff;border:1px solid #777777;border-radius:3px}.zebra th{background-color:#9BAFF1;border:1px solid #777777;color:#ffffff}.zebra td{border:1px solid #777777;padding:0 0.5em 0 0.5em }.zebra tr:nth-child(2n+1){background-color:#E8EDFF}.zebra tr:hover{background-color:#eeeeee}img.stretch{width:100%;height:auto}
+/* cache key: wikidb-esw_:resourceloader:filter:minify-css:7:b92f11e4f7d0d10e1d951c3398796f84 */

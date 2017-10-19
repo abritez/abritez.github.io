@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Color and Measurement Units</title>
+		<link rel="stylesheet" href="../style/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,600,700|Source+Serif+Pro:400,600" rel="stylesheet">
+	</head>
+	<body>
+		<div class="content">
+			<h1>Color and Measurement Units</h1>
+			<p></p>
+			<h2>Color</h2>
+			<p>There are several ways to set the color in CSS. The first is using the name of the color. For good reason, there is a finite amount of color names that are available, but it's a great way to quickly start adding some color without getting bogged down in searching out the appropriate code.</p>
+			<p>For a complete list of color names you could check out the <a href="http://htmlcolorcodes.com/color-names/" target="_blank">HTML Color Code website.</a></p>
+			<pre class="code">color: blue;</pre>
+			<p>In reality, you will likely just remember a handful of colors like <i>red</i>, <i>green</i>, <i>blue</i> and <i>PAPAYAWHIP?</i> Anyhow, this won't take you very far once you start getting into some really designing, along with the fact that there more than 16 million possible color combinations, so the following techniques are commonly used</p>
+			<h3>Hex-decimal</h3>
+			<p>Hex codes are are comprised of a hashtag followed by a mixture of 6 alpha numberic charectors.  These range grom 0-9 and A-F. This is known as a base 16 system, where A-F are proxies for 10-15, but only take up a single charector.</p>
+			<p>Broken down a bit more, the first 2 charectors represent the RED value, the second 2 represent the GREEN, and the last 2 represt BLUE. This makes up a complete RGB value, allowing us to create any color we want. That means that each group has a minimum value of '00' (0) and a max value of FF (255). </p>
+			<p>WTF...so how are you supposed to figure out what values to use? Luckily nearly all design programs offer you a hex color values. Once you design and select the color to go with, just copy the value from your design software and paste it in your code.  An alternative option is using <a href="http://color.adobe.com">Kuler</a>, a really handy tool by Adobe that helps you select some great color combinations.</p>
+			<figure>
+				<img src="../images/color.png" alt="">
+			</figure>
+			<pre class="code">color: #0000FF;</pre>
+			<h3>RGB and RGBA</h3>
+			<p>There really isn't any difference between RGB and Hexdecimal formating other than syntax, with the exception that RGB offers an additional value for Alpha, the 4th value.</p>
+			<p>The alpha value is a range for 0-1, where .5 would equal 50% alpha transparency.  This is important because you might run into an scenario where you need to set an alpha for an element, for example you want to darken the background that a modal popup is sitting on, but you don't want to create an additional CSS rule like <span class = "code">opacity: .5</span>. Instead you could package all that together in one CSS rule.</p>
+			<pre class="code">color: rgba(0, 0, 255, .5);</pre>
+			<h3>HSL and HSLA - Hue, Saturation, and lightness</h3>
+			<p>This is the new color syntax on the block. The premise of this system is to make the color more designer friendly.  Hue is represented as an angle of the color circle (Red=0/360 degree, green=120, blue=240), the Saturation is specified by the colors position based on it's radius ranging from 0-100%, and lightness is based on distance between white (0%) and black (100%).</p>
+			<p>Why is this interesting? Imagine you'd like to quickly create a lighter version of a color, or a differnt color that shares a common tonality.  Doing that in RGB would be nearly impossible without having to use some other image software</p>
+			<figure>
+				<img src="../images/HSL.png" alt="">
+				<img src="../images/HSL_grid.png" alt="">
+			</figure>
+			<h2>Length and Measurement Units</h2>
+			<p>
+				There are 3 types of units that are used in CSS.
+				<ul>
+					<li>Absolute</li>
+					<li>Relative</li>
+					<li>Precentage</li>
+				</ul>
+			</p>
+			<h3>PX (pixel)</h3>
+			<p>A pixel is an absolute unit of measurement. Although it stays the same size, the visual size is depandant on how the device interprets a pixel through the devices screen resolution. This means that the visual size of pixel will differ across monitors, mobile device screens, and any other visual display.</p>
+			<p>All of the main browsers use a standard base font-size of 16px for text.</p>
+			<pre class="code">p{
+	font-size: 18px;
+}</pre>
+			<h3>REM (Root EM)</h3>
+			<p>REM work identical to EM, but they are on relative to the root font.  Since the standard base font-size is 16px, a font that is set at 1 REM would be visually represented as 16px, unless the root font is overridden in CSS.</p>
+			<p>So why is this important?  One reason is accessiblity.  16px is the default size that browsers use, however individuals, specifically individuals with vision imparements might decided that they would like default font size of 20px for their webpages. Since PX is an absolute value, setting the font-size as PX will override the person's font settings.</p>
+			<pre class="code">h1{
+	font-size: 2rem;
+}</pre>
+			<h3>EM</h3>
+			<p>This unit work identical to REM with the exception that it is relative to it's nearest parent element.  People would argue that this makes it more modular. So if i create a component and i want to adjust only the text size there I just need to change the font-size of one of the parent containers. So if the root font size is 16px, but i set a DIV to be 30px, then any element that is 1em inside of that DIV would equal 30px. Move that same element outside of that DIV and it will become 16px again. With the power of added control, comes a potential complexity, especially when you are looking to do pixel perfect design.
+			</p>
+			<pre class="code">p.caption{
+	font-size: .8em;
+}</pre>
+			<h3>Percentage</h3>
+			<p>As the name implies, this unit is a percentage of the the nearest parent font-size, much like EM. So if we set the html font-size to be 12px, then font-size:100% would equal 12px. 50% would equal 6px.</p>
+			<pre class="code">p.caption{
+	font-size: 80%;
+}</pre>
+
+		</div>
+	</body>
+</html>

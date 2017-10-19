@@ -64,11 +64,21 @@
 		</div>
 			<figure>
 				<p data-height="500" data-theme-id="light" data-slug-hash="eGQNyO" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Block & Inline Elements Switch" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/eGQNyO/">Block & Inline Elements Switch</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 			</figure>
 
+
 		<div class="content">
-			<h2>Other diplay properties</h2>
+			<h3>Creating a horizontal list menu</h3>
+			<p>A very popular pattern that developer use that requires overriding display properties is creating a horizontal menu using an unorganized list tag.</p>
+			<p>In the example below notice how in the HTML the className 'active' specifies the item that is currently selected. In the CSS we've set any list item that has a class of active to get an active state visual treatment.  Every time a person clicks on a menu item, we remove the className 'active' from the old link. Immediatly after that the className 'active' is inserted using event.currentTarget</p>
+			<p>The event.currentTarget is the element you bound the event to. This will never change.  You could also use event.target if you'd like know what element you actually clicked on, assuming the element you bound to has child elements.</p>
+
+	</div>
+			<figure>
+				<p data-height="265" data-theme-id="light" data-slug-hash="eGbRKd" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Horizontal List Menu" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/eGbRKd/">Horizontal List Menu</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+		<div class="content">
+			<h2>Other display properties</h2>
 			<h3>Inline-Block</h3>
 			<p>In the event that you want turn a block element into an inline element, but would like to retain the hight and width properties you could use 'display:inline-block'.</p>
 
@@ -78,7 +88,7 @@
 			</div>
 			<figure>
 				<p data-height="400" data-theme-id="light" data-slug-hash="RLqWNJ" data-default-tab="js,result" data-user="abritez" data-embed-version="2" data-pen-title="Hide Element" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/RLqWNJ/">Hide Element</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 			</figure>
 			
 			<div class="content">
@@ -87,7 +97,7 @@
 
 			<figure>
 				<p data-height="450" data-theme-id="light" data-slug-hash="RLqWNJ" data-default-tab="js,result" data-user="abritez" data-embed-version="2" data-pen-title="Toggle Classes using ClassList" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/RLqWNJ/">Toggle Classes using ClassList</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 			</figure>
 		
 		<div class="content">
@@ -110,32 +120,10 @@
 			<figure>
 				<img src="../images/accordian_spec.png" alt="">
 			</figure>
-			<figure>
-				<pre id="editor" class="js-editor editor">
-<html>
-	<head>
-		<title>Accordion Test</title>
-	</head>
-	<body>
-		<div>
-			<a href="#">Label</a>
-			<div class="accordian_body">
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, blanditiis adipisci earum doloremque consequatur laborum iusto. Nam unde iste ut, vitae cum iusto dignissimos omnis ipsum, rem eius illo laudantium.
-				</p>
-				<buttom class="close_btn">Close Window</buttom></a>
-			</div>
-		</div>
-	</body>
-</html>
-				</pre>
-			</figure>
-		<div class="content">
-			<ul>
-				<li></li>
-			</ul>
-		</div>
+		
 
+
+	<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 	<script src="../script/ace-builds-master/src/ace.js"></script>
 	<script>
 		var editor = ace.edit("editor");

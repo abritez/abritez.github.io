@@ -1,0 +1,164 @@
+<html>
+	<head>
+		<title>Test Validation</title>
+
+		<style>
+			.editor {
+		        margin: 0;
+		        height: 100px;
+		        width: 100%;
+		        float: left;
+		    }
+		</style>
+
+	</head>
+	<body>
+		
+<h2>HTML</h2>
+		<pre id="editorA" class="editor">
+&lt;button id='print_btn'&gt;button&lt;/button&gt;
+		</pre>
+
+		<h2>Javascript</h2>
+		<pre id="editorB"  class="editor">
+
+		</pre>
+
+		<h2>CSS</h2>
+		<pre id="editorC"  class="editor">
+
+		</pre>
+
+<h2>Steps</h2>
+<ul>
+	<li>set the background color of the button to 'red'</li>
+	<li>create a variable that stores the button element</li>
+	<li>create a function named 'sendMessage' that launches an alert that says "Hello!"</li>
+	<li>In JS, listen for a 'click' event and call the function</li>
+	<li>Click on the button check to see if your Alert works</li>
+</ul>
+			
+
+
+		<h2>Preview</h2>
+		<button id="testCode_btn">Test Code</button>
+		<iframe id="preview" frameborder="1"></iframe>
+
+
+
+
+		<script src="../script/ace-builds-master/src/ace.js"></script>
+	<script>
+
+		var testCode_btn = document.getElementById("testCode_btn");
+		var preview = document.getElementById("preview");
+		var previewBody = preview.contentDocument || preview.contentWindow.document;
+		var body = previewBody.getElementsByTagName("body")[0];
+		var head = previewBody.getElementsByTagName("head")[0];
+
+
+		var scriptTag = body.appendChild(document.createElement('script'));
+		var styleTag = head.appendChild(document.createElement('style'));
+
+		var steps = [
+		{
+			type: "css",
+			action: "background-color",
+			value: "#ff0000"
+		},
+		{
+			type: "js",
+			action: "id-value",
+			value: "print_btn"
+		},
+		{
+			type: "js",
+			action: "typeof",
+			value: "function"
+		},
+		{
+			type: "js",
+			action: "event-exists",
+			value: "true"
+		}
+		]
+
+
+		var editorA = ace.edit("editorA");
+		editorA.setTheme("ace/theme/twilight");
+		editorA.session.setMode("ace/mode/html");
+
+		var editorB = ace.edit("editorB");
+		editorB.setTheme("ace/theme/twilight");
+		editorB.session.setMode("ace/mode/javascript");
+
+		var editorC = ace.edit("editorC");
+		editorC.setTheme("ace/theme/twilight");
+		editorC.session.setMode("ace/mode/css");
+
+		var code = {};
+		
+		editorA.getSession().on('change', function(e) {
+			console.log("HTML changed");
+		    code.html = editorA.getValue();
+		});
+
+		editorB.getSession().on('change', function(e) {
+		    console.log("JavaScript changed");
+		    code.javascript = editorB.getValue();
+		});
+
+		editorC.getSession().on('change', function(e) {
+		    console.log("CSS changed");
+		    code.css = editorC.getValue();
+		 });
+
+
+		function updatePreview(){
+			styleTag.innerHTML = editorC.getValue();;
+			body.innerHTML = editorA.getValue(); 
+			preview.contentWindow.eval(editorB.getValue());
+
+			//test to see if they create an event
+			//preview.contentWindow.eval("var evt = document.createEvent(\"MouseEvents\")");
+			//preview.contentWindow.eval("evt.initMouseEvent(\"click\", true, true, window, 1, 0, 0, 0, 0,false, false, false, false, 0, null)");
+
+			// var evt = document.createEvent("MouseEvents");
+			// evt.initMouseEvent("click", true, true, window, 1, 0, 0, 0, 0,false, false, false, false, 0, null);
+			// var btn = previewBody.getElementById("print_btn");
+			
+			// previewBody.evt = evt;
+
+			// try{
+			// 	btn.dispatchEvent(previewBody.evt);
+			// }catch(err){
+			// 	console("error on listener")
+			// }
+			
+
+
+			/*
+			get variable test
+			preview.contentWindow.VARIABLE
+
+			check if function exists 
+			typeof preview.contentWindow.print
+
+			check if function exists 
+			typeof preview.contentWindow.print
+			*/
+
+			console.log(preview.contentWindow.eval("btn.dispatchEvent(evt)"));
+
+			
+
+			
+			//preview.contentWindow.eval("if (btn_event){console.log(\"pass\");}else{console.log(\"fail\");}");
+		};
+
+		testCode_btn.addEventListener('click', updatePreview);
+
+
+	</script>
+	</body>
+</html>
