@@ -25,13 +25,21 @@
 			<p>There really isn't any difference between RGB and Hexdecimal formating other than syntax, with the exception that RGB offers an additional value for Alpha, the 4th value.</p>
 			<p>The alpha value is a range for 0-1, where .5 would equal 50% alpha transparency.  This is important because you might run into an scenario where you need to set an alpha for an element, for example you want to darken the background that a modal popup is sitting on, but you don't want to create an additional CSS rule like <span class = "code">opacity: .5</span>. Instead you could package all that together in one CSS rule.</p>
 			<pre class="code">color: rgba(0, 0, 255, .5);</pre>
+			
 			<h3>HSL and HSLA - Hue, Saturation, and lightness</h3>
 			<p>This is the new color syntax on the block. The premise of this system is to make the color more designer friendly.  Hue is represented as an angle of the color circle (Red=0/360 degree, green=120, blue=240), the Saturation is specified by the colors position based on it's radius ranging from 0-100%, and lightness is based on distance between white (0%) and black (100%).</p>
-			<p>Why is this interesting? Imagine you'd like to quickly create a lighter version of a color, or a differnt color that shares a common tonality.  Doing that in RGB would be nearly impossible without having to use some other image software</p>
+			
 			<figure>
 				<img src="../images/HSL.png" alt="">
 				<img src="../images/HSL_grid.png" alt="">
 			</figure>
+			
+			<p>Why is this interesting? Imagine you'd like to quickly create a lighter version of a color, or a differnt color that shares a common tonality.  Doing that in RGB would be nearly impossible without having to use some other image software</p>
+		</div>
+			<figure><p data-height="265" data-theme-id="light" data-slug-hash="qPgRaa" data-default-tab="js,result" data-user="abritez" data-embed-version="2" data-pen-title="HSL color picker" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/qPgRaa/">HSL color picker</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+		<div class="content">
+
 			<h2>Length and Measurement Units</h2>
 			<p>
 				There are 3 types of units that are used in CSS.
@@ -64,7 +72,8 @@
 			<pre class="code">p.caption{
 	font-size: 80%;
 }</pre>
-
+			<h3>PT (Points)</h3>
+			<p>Points is a unit of measurement typically uses in print.  You rarely see front-end web development. </p>
 		</div>
 	</body>
 </html>
