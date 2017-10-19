@@ -59,14 +59,14 @@
 			<p>In the example above your notice that elements with a class name of "special" show up differantly.</p>
 
 			<h2>Child Combinator Selector (element > element)</h2>
-			<p>Very similar to the descendant selector, child combinators and another level of speficity were only immediate children are targeted.</p>
+			<p>Very similar to the descendant selector, child combinators offer another level of speficity were only immediate children are targeted.</p>
 			<p>To specify a child combinator you need to add a ">" in between the parent and child selectors.</p>
 
 			<figure>
 				<p data-height="400" data-theme-id="light" data-slug-hash="BwMvgj" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Selector: Child Combinator" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/BwMvgj/">Selector: Child Combinator</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 			</figure>
 
-			<p>In the example above your notice that elements with a class name of "special" show up differantly.</p>
+			<p>In the example above your notice that elements with a class name of "special" show up differantly. This is because the "SPAN" that lives inside of the "P" is not an immediate child of "ASIDE". It is an immediate child of "P".</p>
 
 			<h2>General Sibling Combinator Selector (element ~ element)</h2>
 			<p>The general sibling combinator (~) separates two selectors and matches the second element only if it follows the first element (though not necessarily immediately), and both are children of the same parent element</p>
@@ -84,7 +84,7 @@
 				<p data-height="400" data-theme-id="light" data-slug-hash="oGmmmj" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Selector: Adjacent Sibling Combinator" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/oGmmmj/">Selector: Adjacent Sibling Combinator</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 			</figure>
 
-			<p>In the example above your notice that only one adjacent operator is targeting an element. The other is failing because the sibling is not "immedialy" following the element on the left of the selector.</p>
+			<p>In the example above your notice that only one adjacent operator is targeting an element. The other is failing because the sibling is not "immedialy" following the element on the left of the selector. There is an "H3" in between the "H2" and "P" tags.</p>
 
 			<h2>Attribute Selector (element[attribute="value"])</h2>
 			<p>Most elements have a variety of attibutes that could be added inside of the tag. For example your "&lt;a target="_blank">" or "&lt;input type="text">". Using an attribute selector we could target only those elements that are of that type. This is really handy when dealing with inputs. Inputs have a type attribute that specify the type of form element it is. Its pretty obvious that the style consideration you make for a radio  button and submit button would differ greatly.</p>
