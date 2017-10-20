@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>Floats</title>
+		<link rel="stylesheet" href="../style/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,600,700|Source+Serif+Pro:400,600" rel="stylesheet">
+	</head>
+	<body>
+		<div class="content">
+			<h1>Floats</h1>
+			<h2>Normal Default Layout</h2>
+			<p>Every browser has some preset layout rules, many of which have been standardized by the governing body that oversees all things web. Browser developers are tasked to package in these "user agent" defaults, that then get overriden by either the user of the browser, or the author of website it's via CSS.</p>
+			
+			<p>Below you will see a very example of how a website might look with a normal default layout that simple relies on the browser for layout.</p>
+
+			<figure>
+				<p data-height="600" data-theme-id="light" data-slug-hash="boZjbY" data-default-tab="result" data-user="abritez" data-embed-version="2" data-pen-title="Position: Normal" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/boZjbY/">Position: Normal</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+			</figure>
+
+			<h2>Floats</h2>
+			<p>Float were created in order to achive similar layout techniques that have been used in print design from many years.</p>
+			<figure>
+				<img src="../images/floats.png" alt="">
+			</figure>
+			<p>A floated box is positioned within the normal flow, then taken out of the flow and shifted to the left or right as far as possible. Content may flow along the side of a float.</p>
+			<p>When you float an element it becomes a block box. This box can then be shifted to the left or right on the current line. The markup options are "float: left", "float: right" or "float: none".</p>
+
+			<p>In the code below we created a CSS rule that floats any Figure element to right if it contains a class name of "right" and left if it contains the class name "left". This way all you need to do to change layout is simply change the class name you use.</p>
+
+<pre class="code">figure.right{
+	float: right;
+}
+
+figure.left{
+	float: right;
+}
+
+</pre>
+
+			<p>Peek at the HTML and CSS in the example below to see how the layout was achived.</p>
+			
+		</div>
+			<figure>
+				<p data-height="400" data-theme-id="light" data-slug-hash="vePZze" data-default-tab="result" data-user="abritez" data-embed-version="2" data-pen-title="Position: Floats" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/vePZze/">Position: Floats</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+			</figure>
+		<div class="content">
+			<p>Another thing that floats are used for is to have a series of block elements sit side by side.</p>
+			
+			<h3>Clearing floats</h3>
+			<p>Sometime you may run into an issue where the parent of your floating object is not acting as expected. This is a pretty common problem when working with floats</p>
+
+			<p>In the example below you will notice that there is a container div that has a red border, but it is not resizing to wrap around it's children as you might expect.</p>
+
+
+		</div>
+			<figure>
+				<p data-height="350" data-theme-id="light" data-slug-hash="oGVMzb" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Position: Floats & Clear" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/oGVMzb/">Position: Floats & Clear</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+<div class="content">
+			<p>We could fix this problem by adding <b>overflow:auto</b> to the parent element.</p>
+</div>
+			<figure>
+				<p data-height="350" data-theme-id="light" data-slug-hash="mBojgX" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Position: Floats Solution 1" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/mBojgX/">Position: Floats Solution 1</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+		<div class="content">
+			<p>Depending on what you are doing, using overflow:auto might cause a scrollbar if your content is extending the boundary of the container. For example, if you have a long unbreaking text (ie. long url text) or a large image that is bigger then the container a scrollbar will show.</p>
+
+			<p>One option is to use overflow:hidden, but that just means that the overflow text or image will be hidden. The other option is create a max-width for you image. There is also a CSS rule for breaking large words like URLS called, word-wrap: break-word.  That might work in some cases.</p>
+
+
+		</div>
+		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	</body>
+</html>
