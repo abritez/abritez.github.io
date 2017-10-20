@@ -47,7 +47,7 @@ figure.left{
 		<div class="content">
 			<p>Another thing that floats are used for is to have a series of block elements sit side by side.</p>
 			
-			<h3>Clearing floats</h3>
+			<h3>Fixing container issues</h3>
 			<p>Sometime you may run into an issue where the parent of your floating object is not acting as expected. This is a pretty common problem when working with floats</p>
 
 			<p>In the example below you will notice that there is a container div that has a red border, but it is not resizing to wrap around it's children as you might expect.</p>
@@ -67,6 +67,44 @@ figure.left{
 			<p>Depending on what you are doing, using overflow:auto might cause a scrollbar if your content is extending the boundary of the container. For example, if you have a long unbreaking text (ie. long url text) or a large image that is bigger then the container a scrollbar will show.</p>
 
 			<p>One option is to use overflow:hidden, but that just means that the overflow text or image will be hidden. The other option is create a max-width for you image. There is also a CSS rule for breaking large words like URLS called, word-wrap: break-word.  That might work in some cases.</p>
+
+			<h3>Stopping elements that you don't want to float</h3>
+			<p>It is only a matter of time from when you start using floats that some element that isn't supposed to float will want to join in on the fun.</p>
+
+		</div>
+
+			<figure>
+				<p data-height="265" data-theme-id="light" data-slug-hash="GMewRr" data-default-tab="html,result" data-user="abritez" data-embed-version="2" data-pen-title="Float: footer clearing issue" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/GMewRr/">Float: footer clearing issue</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+		<div class="content">
+			<p>Although you could fix this using the overflow solution, you might want to also use clear:left on the element that you'd like to break the float. In this example we want the footer to act more like a block level element, and take up the the entire space of it's container. Take a peek at the clear:left code we added inside the footer selector.</p>
+		</div>
+			<figure>
+				<p data-height="265" data-theme-id="light" data-slug-hash="WZmYrz" data-default-tab="html,result" data-user="abritez" data-embed-version="2" data-pen-title="Float: footer clearing issue fix" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/WZmYrz/">Float: footer clearing issue fix</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+</figure>
+
+		<div class="content">
+
+		<h2>Practical Examples</h2>
+		<h3>Having something float to the right in your header</h3>
+		<p>It is pretty common that you want to add some elements on the top right hand side of your header.  This video goes though a quick approach using floats.</p>
+		<figure>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/eY10aNXOG9w" frameborder="0" allowfullscreen></iframe>
+		</figure>
+
+		<h3>Creating a simple reflowable gallery</h3>
+		<p>In this example I am using floats to create grid like gallery that you might see in a portfolio or ecommerce site.</p>
+		<figure>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/TK9pjZDQcVY?rel=0" frameborder="0" allowfullscreen></iframe>
+		</figure>
+
+		<h3>Adding sidebar navigation</h3>
+		<p>There are several methods for laying out a sidebar. In this example we use a combination of floats and margins to get our desired effect.</p>
+		<figure>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/lhqAMcaKnFg?rel=0" frameborder="0" allowfullscreen></iframe>
+		</figure>
 
 
 		</div>
