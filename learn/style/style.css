@@ -13,7 +13,9 @@ pre.code{
 	background-color: #C8E3FF;
 	border-radius: 8px;
 	padding: 10px;
-  overflow: hidden;
+  overflow: scroll;
+  font-family: 'Source Code Pro', monospace;  
+
 }
 
 figure{
@@ -112,12 +114,24 @@ ul.longlist{
 	font-weight: 600;
 }
 
-.code{
-	font-family: 'Source Code Pro', monospace;	
-}
 
 p, li{
 	font-family: 'Source Serif Pro', serif;
 	font-size: 1.2em;
 	line-height: 1.5;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th{
+  background-color: #dddddd;
 }

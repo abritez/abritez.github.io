@@ -1,0 +1,181 @@
+<html>
+	<head>
+		<title>Media Queries</title>
+		<link rel="stylesheet" href="../style/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,600,700|Source+Serif+Pro:400,600" rel="stylesheet">
+
+	</head>
+	<body>
+		<div class="content">
+			<h2>Introduction</h2>
+			<p>Media Queries allows you to conditionally control your CSS based on a variety of factors which include the type of media your site is being viewed on, the width of your browser viewport, even environmental factors like lighting conditions (coming soon)</p>
+
+			<p>A media query consists of two components: a media type that describes the medium that they user is on when accessing the website and an expression that states the properties and values that need to be true in order to for the corresponding style sheet or style rules are applied, following the normal cascading rules</p>
+			
+			<h3>Media Types</h3>
+			<p>The value of the "media" attribute specifies on what device the linked document will be displayed.</p>
+			<ul>
+				<li>print: Used for printers</li>
+				<li>screen: Used for computer screens, tablets, smart-phones etc.</li>
+				<li>speech: Used for screenreaders that "reads" the page out loud</li>
+			</ul>
+			<p>Setting this to "all" would indicate that the styling rules apply to all the devices</p>
+			
+			<h3>Media Properties</h3>
+			<p>Below are some of the media features that CSS could adapt for. We designing for mobile and desktop, the most common features to adapt for are typically <i>screen width</i> and <i>orientation</i>.</p>
+			<table>
+				<tr>
+					<th>Feature</th>
+					<th>Value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>width</td>
+					<td>length</td>
+					<td>The viewport width. This value will change as the user resizes their browser.</td>
+				</tr>
+				<tr>
+					<td>height</td>
+					<td>length</td>
+					<td>The viewport hieght. This value will change as the user resizes their browser.</td>
+				</tr>
+				<tr>
+					<td>device-width</td>
+					<td>length</td>
+					<td>The width of the device, such as a computer screen. This is a static value.</td>
+				</tr>
+				<tr>
+					<td>device-height</td>
+					<td>length</td>
+					<td>The height of the device, such as a computer screen. This is a static value.</td>
+				</tr>
+				<tr>
+					<td>orientation</td>
+					<td>portorate || landscape</td>
+					<td>The orientation of the viewport (landscape or portrait mode). This change as the user rotates their device. Mostly used in a mobile context</td>
+				</tr>
+				<tr>
+					<td>aspect-ratio</td>
+					<td>ratio</td>
+					<td>The ratio between the width and the height of the viewport</td>
+				</tr>
+				<tr>
+					<td>color</td>
+					<td>interger</td>
+					<td>The number of bits per color component for the output device</td>
+				</tr>
+				<tr>
+					<td>color-index</td>
+					<td>interger</td>
+					<td>The number of colors the device can display</td>
+				</tr>
+				<tr>
+					<td>monochrome</td>
+					<td>length</td>
+					<td>The number of bits per "color" on a monochrome (greyscale) device</td>
+				</tr>
+				<tr>
+					<td>resolution</td>
+					<td>resolution</td>
+					<td>The resolution of the output device, using dpi or dpcm</td>
+				</tr>
+				<tr>
+					<td>scan</td>
+					<td>progressive || interlace</td>
+					<td>The scanning process of the output device</td>
+				</tr>
+				<tr>
+					<td>grid</td>
+					<td>length</td>
+					<td>Whether the device is a grid or bitmap</td>
+				</tr>
+			</table>
+
+
+			<h2>Syntax Examples</h2>
+			<h3>Anatomy of a Media Query in CSS</h3>
+			<pre class="code">
+@media <i>not|only mediatype</i> and (<i>expressions</i>) {
+    <i>CSS-Code;</i>
+}
+			</pre>
+
+			<h3>Anatomy of a Media Query on Link tag</h3>
+
+			<pre class="code">
+&lt;link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css"&gt;
+			</pre>
+
+			<h2>Breakpoints</h2>
+			<p>The best practice in building websites that adapt to all screen size is to start with the smallest one. As your screen width increases in width you could a breakpoint that adapts to the larger display</p>
+
+			<p>There are a couple schools of thought on how to define breakpoint. You could either look for standardized widths across devices like 320 (iPhone), 768px (iPad), etc, or you could set breakpoints that work best for your content. </p>
+
+			<p>Below are the breakpoints set by Twitter bootstrap, using a mobile first approach.  Keep in mind that there is no "rule", so be sure to test your breakpoint scheme with your own content.</p>
+
+			<pre class="code">
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+
+    /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
+
+			</pre>
+
+	<h2>Practicle Examples</h2>
+	<h3>Adjusting fonts sizes</h3>
+	<p>In some cases you might want to adjust your font size based on the type of device the user is using when engaging with your website.</p>
+
+	<p>This sometimes happens when you site has very long complex Headers aross it website. The end result on mobile is an unbalanced presentation that takes up a majority of your viewport.</p>
+
+	<figure>
+		<img src="../images/modernscale-one-scale.jpg" alt="">
+		<figcaption>
+			Image credit: <a href="http://typecast.com/blog/a-more-modern-scale-for-web-typography">A More Modern Scale for Web Typography</a>
+		</figcaption>
+	</figure>
+
+	<p>Resize your browser and see how the header adjust in the example below. Make sure to take peek at the CSS and Media Queries that are faciliting the adjustments based on screen size.</p>
+</div>
+	<figure>
+		<p data-height="350" data-theme-id="0" data-slug-hash="aLgJLv" data-default-tab="result" data-user="abritez" data-embed-version="2" data-pen-title="aLgJLv" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/aLgJLv/">aLgJLv</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	</figure>
+
+<div class="content">
+	<h3>Responsive Menu</h3>
+	<p>Depending on how you design your navigation elements, the UI might need to adapt for smaller screen. In the example below we have a tradition side panel navigation shift to a top bar navigation.</p>
+</div>
+	<figure>
+		<p data-height="265" data-theme-id="0" data-slug-hash="KXjmmd" data-default-tab="result" data-user="abritez" data-embed-version="2" data-pen-title="Responsive: Horizontal List Menu" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/KXjmmd/">Responsive: Horizontal List Menu</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	</figure>
+	<div class="content">
+		</div>
+		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	</body>
+</html>
