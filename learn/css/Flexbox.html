@@ -1,0 +1,187 @@
+<html>
+	<head>
+		<title>Flexbox</title>
+		<link rel="stylesheet" href="../style/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,600,700|Source+Serif+Pro:400,600" rel="stylesheet">
+
+	</head>
+	<body>
+		<div class="content">
+			<h1>Flexbox</h1>
+			<p>The Flexbox Layout module was created to allow a more optimal approach for handling different screen sizes and different display device. At it's core it is collection of CSS properties that are used to align content and distribute space.</p>
+
+			<p>Flex containers (parent) control the layout of child elements. That means properties such as "float" aren't necessary since the child is no longer in charge of adjusting it's positional state. That also means that elements inside of flexbox elements are direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based).</p>
+
+			<p>Using the standard box model approach, the example below relies on the child to set the rules for where it will land in space. </p>
+
+		</div>
+			<figure>
+				<p data-height="350" data-theme-id="light" data-slug-hash="yzmKGp" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Flexbox: box-model" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/yzmKGp/">Flexbox: box-model</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+		<div class="content">	
+
+			<h2>Display Values</h2>
+			<h3>display:flex</h3>
+			
+			<p>As mentioned above, when positioning elements using flexbox layout, the container control much of the stying. Creating a flex container is a simple as adding "display:flex" on the CSS of that parent.  All children will automatically start responding as flexbox items, disregarding CSS rules such as float and margin.</p>
+
+			<p>The flex container is acts as a block element. In the example below you will notice that the red outline streatch across the entire screen.</p>
+
+		</div>
+			<figure>
+				<p data-height="350" data-theme-id="light" data-slug-hash="VMoXdJ" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Flexbox: flex" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/VMoXdJ/">Flexbox: flex</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+		<div class="content">
+
+			<h3>display:inline-flex</h3>
+
+			<p>If you'd like your flex container to act more like an inline property, much like a SPAN, you have the option to use "display:inline-flex".</p>
+
+			<p>In the example below the flex container is now behaving like an inline element.  The red border on the parent is now snugging aroud the child content, and not stretch the entire width of it's container.</p>
+
+		</div>
+			<figure>
+				<p data-height="350" data-theme-id="light" data-slug-hash="yzmKRP" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Flexbox: inline-flex" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/yzmKRP/">Flexbox: inline-flex</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+		<div class="content">
+
+
+			<h2>Properties</h2>
+			<h3>flex-direction</h3>
+			
+			<p>
+				This property defines the axis in which all child elements will flow. This includes not only horizontal and vertical, but also reversed. 
+			</p>
+
+			<ul>
+				<li>row: the items will align from left to right</li>
+				<li>row-reverse: the items will align from right to left</li>
+				<li>column: the items will align from top to bottom</li>
+				<li>column-reverse: the items will align from bottom to top</li>
+			</ul>
+
+		</div>
+
+			<figure>
+				<p data-height="500" data-theme-id="light" data-slug-hash="zEgjGe" data-default-tab="html,result" data-user="abritez" data-embed-version="2" data-pen-title="Flexbox: flex-direction" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/zEgjGe/">Flexbox: flex-direction</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+		<div class="content">
+			<h3>flex-wrap</h3>
+			<p>By default all the item in a flex line will force themselves to fit in one line.  If you'd like to make sure that items flow to the next line, then flex-wrap might do the trick.</p>
+
+			<p>Possible options include:</p>
+			<ul>
+				<li>nowrap: keep all items on one line.</li>
+				<li>wrap: multi-line wrapping from top to bottom.</li>
+				<li>wrap-reverse: multi-line wrapping from bottom to top.</li>
+			</ul>
+		</div>
+
+			<figure>
+				<p data-height="800" data-theme-id="light" data-slug-hash="boXMra" data-default-tab="html,result" data-user="abritez" data-embed-version="2" data-pen-title="Flexbox: flex-wrap" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/boXMra/">Flexbox: flex-wrap</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+			</figure>
+
+		<div class="content">
+
+			<h3>flex-flow: <‘flex-direction’> || <‘flex-wrap’></h3>
+			<p>This property is short-hand for both flex-direction and flex-wrap</p>
+				
+			<pre class="code">
+.flex-container {
+  flex-flow: row wrap;
+}</pre>
+
+
+		</div>
+
+			<figure>
+				<p data-height="350" data-theme-id="light" data-slug-hash="zEgjGe" data-default-tab="html,result" data-user="abritez" data-embed-version="2" data-pen-title="Flexbox: flex-direction" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/zEgjGe/">Flexbox: flex-direction</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+		<div class="content">
+
+			<h3>justify-content</h3>
+			<p></p>
+			<ul>
+				<li>flex-start (default): items are packed toward the start line</li>
+				<li>flex-end: items are packed toward to end line</li>
+				<li>center: items are centered along the line</li>
+				<li>space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line</li>
+				<li>space-around: items are evenly distributed in the line with equal space around them</li>
+				<li>space-evenly: items are distributed so that the spacing between any two adjacent alignment subjects, before the first alignment subject, and after the last alignment subject is the same</li>
+			</ul>
+		</div>
+
+			<figure>
+				<p data-height="350" data-theme-id="0" data-slug-hash="KyPVVZ" data-default-tab="result" data-user="abritez" data-embed-version="2" data-pen-title="Flexbox & justify-content" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/KyPVVZ/">Flexbox & justify-content</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+		<div class="content">
+
+			<h3>align-items</h3>
+			
+			<p>
+				
+			</p>
+
+			<p>If you would like to only adjust a specific item inside of a container then use "align-self"</p>
+
+			<ul>
+				<li>flex-start: cross-start margin edge of the items is placed on the cross-start line</li>
+				<li>flex-end: cross-end margin edge of the items is placed on the cross-end line</li>
+				<li>center: items are centered in the cross-axis</li>
+				<li>baseline: items are aligned such as their baselines align</li>
+				<li>stretch (default): stretch to fill the container (still respect min-width/max-width)</li>
+			</ul>
+
+		</div>
+
+			<figure>
+				<p data-height="265" data-theme-id="light" data-slug-hash="VMoOPM" data-default-tab="css,result" data-user="abritez" data-embed-version="2" data-pen-title="Flexbox: flex-align" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/VMoOPM/">Flexbox: flex-align</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+		<div class="content">
+
+			<h3>align-content</h3>
+
+			<p>
+				This property helps to specify formating rules when the container has extra space on the vertical-access, apposed to justify-content that looks at individual elements in the horizontal-axis.
+			</p>
+
+			<ul>
+				<li>flex-start: lines packed to the start of the container</li>
+				<li>flex-end: lines packed to the end of the container</li>
+				<li>center: lines packed to the center of the container</li>
+				<li>space-between: lines evenly distributed; the first line is at the start of the container while the last one is at the end</li>
+				<li>space-around: lines evenly distributed with equal space between them</li>
+				<li>stretch (default): lines stretch to take up the remaining space</li>
+			</ul>
+
+
+		</div>
+
+			<figure>
+				<p data-height="350" data-theme-id="light" data-slug-hash="yzmWWO" data-default-tab="result" data-user="abritez" data-embed-version="2" data-pen-title="Flexbox: align-content" class="codepen">See the Pen <a href="https://codepen.io/abritez/pen/yzmWWO/">Flexbox: align-content</a> by Alex Britez (<a href="https://codepen.io/abritez">@abritez</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			</figure>
+
+		<div class="content">
+
+
+			<h2>Practicle Examples</h2>
+			<p>Below are some of the more tricky layout examples that have troubled CSS developer when using box-model layout. Developer have been able to come up with some clever hack, to get their desired effects, but flexbox has dramatically simplified many of them.</p>
+			<h3>Equal Heights</h3>
+			<h3>Verticle centered content</h3>
+			<h3>Media Objects</h3>
+			<h3>Sticky Footers</h3>
+			<h3>Column Layouts</h3>
+
+			<h2>Browser Support</h2>
+			<p>For latest browser suppport go to <a href="https://caniuse.com/#feat=flexbox">Can I Use: Flexbox</a></p>
+		</div>
+
+		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+	</body>
+</html>
