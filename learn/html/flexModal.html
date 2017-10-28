@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title>Flex Modal</title>
+	
+		<style>
+			
+
+			#dialogContainer.hidden{
+				display: none;
+			}
+
+
+			#dialogContainer{
+				background-color: rgba(0,0,0,.5);
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex: 1;
+			}
+
+			#dialog{
+				background-color: #ffffff;
+				max-width: 700px;
+				/* max-width: 90%; */
+				margin-left: 20px;
+				margin-right: 20px;
+				border-radius: 5px;
+			}
+
+			#dialogTitle, #dialogBody, #dialogActions{
+				padding: 15px;
+			}
+
+			#dialogFooter{
+				display: flex;
+				justify-content: flex-end;
+
+			}
+
+			button{
+				padding: 10px 15px 10px 15px;
+				border-radius: 5px;
+				border-style: none;
+				background-color: rgb(7, 159, 225);
+				color: rgb(255, 255, 255);
+				font-size: 1em;
+			}
+
+		</style>
+
+	</head>
+	<body>
+			
+		<h1>Flex Modal</h1>
+		<p>An example of using display: flex with align-items: center and justify-content: center for positioning the modal box in the center of the screen. This simple approach does not rely on knowing the dimensions of the modal box.</p>
+
+		<button id="modal_btn">Show Modal</button>
+		
+		<div id="dialogContainer" class="hidden">
+			<div id="dialog" role="dialog" labelledby="dialogTitle">
+				<div id="dialogTitle">My Dialog Box</div>
+				<div id="dialogBody">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus officia quas obcaecati dolore voluptates alias totam, maiores eius odio tempora quidem earum perspiciatis. Quod quae, impedit earum dolorum totam distinctio.</div>
+				<div id="dialogFooter">
+					<div id="dialogActions">
+						<button id="dialogCancel_btn">Cancel</button>
+						<button id="dialogSave_btn">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+		
+			var modal_btn = document.querySelector("#modal_btn");
+			var dialogCancel_btn = document.querySelector("#dialogCancel_btn");
+			var dialogSave_btn = document.querySelector("#dialogSave_btn");
+			
+
+			modal_btn.addEventListener('click', function(){
+				var dialogContainer = document.querySelector("#dialogContainer");
+				dialogContainer.classList.remove("hidden");
+			});
+
+			dialogSave_btn.addEventListener('click', function(){
+				var dialogContainer = document.querySelector("#dialogContainer");
+				dialogContainer.classList.add("hidden");
+			});
+
+			dialogCancel_btn.addEventListener('click', function(){
+				var dialogContainer = document.querySelector("#dialogContainer");
+				dialogContainer.classList.add("hidden");
+			});
+
+		</script>
+
+	</body>
+</html>
