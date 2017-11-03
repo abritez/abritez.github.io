@@ -49,7 +49,17 @@
 
 			</ol>
 
+			<h2>Database Permission Rules</h2>
+
+			<p>Firebase allows you to set permission rules directly from the Console interface.  What this means is that you have the ability to say if a user of your site is able to either write to your database or read any data from it without being Authenticated.</p>
+			
+			<p>In the example below I have set the rules to allow my database to be completely public by setting both "read" and "write" values to "true".  Typically you would only do this for testing, so be aware that you'd want to add authentication for storing data.  We will talk about authentication later.</p>
+			<figure>
+				<img src="../images/Firebase_rules.png" alt="">
+			</figure>
+
 			<h2>Reading & Writing Data</h2>
+
 			<p>The information below is take from the <a href="https://firebase.google.com/docs/database/web/read-and-write">Firebase documentation</a>.</p>
 
 			<p>In order to write or read data using Firebase you need to use the library's pre-defined API.  In the examples below you will notice that each of these methods starts off by specifying "firebase.database()"</p>
@@ -85,6 +95,7 @@
 			<figure>
 				<img src="../images/Firebase_Example_Store.png" alt="">
 			</figure>
+
 
 		<h3>Practicle Examples</h3>
 		<h2>Form Submission</h2>
