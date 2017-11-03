@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="../style/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,600,700|Source+Serif+Pro:400,600" rel="stylesheet">
+	</head>
+	<body>
+		<div class="content">
+			<h1>Firebase</h1>
+			<h2>Installation Setup</h2>
+			<h3>Create an API Key</h3>
+	
+			<h3>Install Firebase</h3>
+			<p>
+				To install the Firebase CLI, you first need to <a href="http://firebase.google.com">sign up for a Firebase account</a>.
+			</p>
+			<p>Then you need to install Node.js and npm. Note that installing Node.js should install npm as well.</p>
+			
+			<p>Once npm is installed, get the Firebase CLI by running the following command in your terminal:</p>
+
+			<pre class="code">npm install -g firebase-tools</pre>
+
+			<figure><img src="../images/terminal.png" alt=""></figure>
+
+			<p>This will provide you with the globally accessible firebase command from your Terminal.</p>
+
+			<p>For a complete list of Firebase commands vist the <<a href="https://github.com/firebase/firebase-tools">Firebase CLI Github page</a>.</p>
+
+			<h2>Create Project</h2>
+			<p>A project is a container for your application. Each project will allow for features such as hosting, databased, and authentication to be enabled.</p>
+			<ol>
+				<li>Go to www.firebase.com and create an account</li>
+				<li>Select "Go To Console" on top of screen<br><figure><img src="../images/Firebase_console.png" alt=""></figure></li>
+				<li>Select "Add Project"<br><figure><img src="../images/Firebase_console_createNew.png" alt=""></figure></li>
+				<li>Type in your product's name and take note of the assigned projectID. This projectId is a unique identifier that will be used in your URL. If the ID is taken, and the system appends random charectors to the end, you have the ability to change it to something else.<br><figure><img src="../images/Firebase_console_create_modal.png" alt=""></figure></li>
+				<li>
+					Click on "Add Firebase to your web app"
+					<br><figure><img src="../images/Firebase_Web.png" alt=""></figure>
+				</li>
+				<li>
+					We will likely require this same configuration across multiple files. In order to reuse the same code across file copy the configuration code, and paste it into a new file.  You might call it something like "firebase_config.js"
+					<br><figure><img src="../images/Firebase_copyConfig.png" alt="">
+					<figcaption>Copy configuration</figcaption>
+					</figure>
+				</li>
+				<li>
+					Remove the firebase library script tag and add it to your HTML, then remove script tags from the JS files. You should only have Javascript in your Javascript file.
+					<br><figure><img src="../images/firebase_html.png" alt="">
+					<figcaption></figcaption>
+					</figure>
+				</li>
+
+			</ol>
+
+			<h2>Reading & Writing Data</h2>
+			<p>The information below is take from the <a href="https://firebase.google.com/docs/database/web/read-and-write">Firebase documentation</a>.</p>
+
+			<p>In order to write or read data using Firebase you need to use the library's pre-defined API.  In the examples below you will notice that each of these methods starts off by specifying "firebase.database()"</p>
+
+			<h3>Writing Data</h3>
+
+			
+			<p>You can use set() to save data to a specified reference, replacing any existing data at that path. For example a social blogging application might add a user with set() as follows:</p>
+
+			<pre class="code">function writeUserData(userId, name, email, imageUrl) {
+  firebase.database().ref('users/' + userId).set({
+    username: name,
+    email: email,
+    profile_picture : imageUrl
+  });
+}</pre>
+
+			<p>The "ref()" part allows you to structure your database however you'd like. In the example below, I am telling firebase to create an object named "users" and inside of that object store objects that start with a userId. It would end up looking something like this:</p>
+
+<pre class="code">{users: {
+	user1: {
+		name: John,
+		email: john@email.com
+	},
+	user2: {
+		name: Mary,
+		email: mary@email.com
+	}			
+}</pre>
+
+		<p>Here is an example of the code implemented, and storing to the data base. Make sure that the HTML file is calling your "firebase_config.js" so it knows your account.</p>
+
+			<figure>
+				<img src="../images/Firebase_Example_Store.png" alt="">
+			</figure>
+
+
+	</body>
+</html>
